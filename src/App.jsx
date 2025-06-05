@@ -8,9 +8,10 @@ import Campus from './components/Campus/Campus';
 import Testimonials from './components/Testimonials/Testimonials';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 
 const App = () => {
-  const [playstate, setPltastate]=useState(false);
+  const [blay, setBlay]=useState(false);
   return (
     <div>
       <Navbar/>
@@ -18,7 +19,7 @@ const App = () => {
       <div className="container">
         <Title subtitle='Our Program' title='What we offer'/>
          <Program/>
-         <About setPltastate={setPltastate}/>
+         <About setBlay={setBlay}/>
           <Title subtitle='Gallery' title='Campus Photos'/>
           <Campus/>
            <Title subtitle='Testimonials' title='see what student says'/>
@@ -26,8 +27,9 @@ const App = () => {
             <Title subtitle='Contact Us' title='Get in Touch'/>
             <Contact/>
             <Footer/>
+
       </div>
-     
+     <VideoPlayer blay={blay} setBlay={setBlay}/>
     </div>
   )
 }
