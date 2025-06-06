@@ -9,27 +9,29 @@ import user_4 from "../../assets/user-4.png";
 import { useRef } from "react";
 
 const Testimonials = () => {
-    const slider=useRef();
-    let tx=0;
-    const nextFarward=()=>{
-        if(tx>-50){
-            tx-=25
-
-        }
-        slider.current.style.transform=`translateX(${tx}%)`
-
+  const slider = useRef();
+  let tx = 0;
+  const nextFarward = () => {
+    if (tx > -50) {
+      tx -= 25;
     }
-    const nextbackFarward=()=>{
-         if(tx<0){
-            tx+=25
-
-        }
-        slider.current.style.transform=`translateX(${tx}%)`
+    slider.current.style.transform = `translateX(${tx}%)`;
+  };
+  const nextbackFarward = () => {
+    if (tx < 0) {
+      tx += 25;
     }
+    slider.current.style.transform = `translateX(${tx}%)`;
+  };
   return (
     <div className="testimonials">
-      <img src={next_icon} alt="" className="next_btn"  onClick={nextFarward}/>
-      <img src={back_icon} alt="" className="back_btn"onClick={nextbackFarward} />
+      <img src={next_icon} alt="" className="next_btn" onClick={nextFarward} />
+      <img
+        src={back_icon}
+        alt=""
+        className="back_btn"
+        onClick={nextbackFarward}
+      />
       <div className="slider">
         <ul ref={slider}>
           <li>

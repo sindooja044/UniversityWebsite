@@ -7,18 +7,16 @@ import msg_icon from "../../assets/msg-icon.png";
 import white_arrow from "../../assets/white-arrow.png";
 
 const Contact = () => {
-    const [result, setResult] = React.useState("");
+  const [result, setResult] = React.useState("");
 
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
-
     formData.append("access_key", "c6932e03-b663-44c8-942a-6e4c6e6e9dc8");
-
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const data = await response.json();
@@ -45,18 +43,15 @@ const Contact = () => {
         </p>
         <ul>
           <li>
-            {" "}
             <img src={mail_icon} alt="" />
             Contact@gmail.com
           </li>
           <li>
-            {" "}
             <img src={phone_icon} alt="" />
             +91 1234567890
           </li>
 
           <li>
-            {" "}
             <img src={location_icon} alt="" />
             77, England
           </li>
@@ -95,7 +90,7 @@ const Contact = () => {
           <button type="submit" className="btn dark-btn">
             {" "}
             Submit Now
-            <img src={white_arrow} alt=""/>
+            <img src={white_arrow} alt="" />
           </button>
           <span>{result}</span>
         </form>

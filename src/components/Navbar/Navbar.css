@@ -1,66 +1,64 @@
-nav{
-    width: 100%;
-    color: #fff;
-    padding:4px 0;
+nav {
+  width: 100%;
+  color: #fff;
+  padding: 4px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+.logo {
+  width: 189px;
+  padding: 10px;
+}
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+  margin: 4px 20px;
+  font-size: 16px;
+}
+.dark-nav {
+  background-color: blue;
+}
+.menu_icon {
+  display: none;
+}
+@media (max-width: 1000px) {
+  .logo {
+    width: 140px;
+  }
+  nav ul li {
+    margin: 10px 15px;
+  }
+}
+@media (max-width: 840px) {
+  nav {
+    padding: 15px 0;
+  }
+  nav ul {
     position: fixed;
-    top:0;
-    left:0;
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-    z-index: 10;
-}
-.logo{
-    width: 189px;
-    padding:10px;
-}
-nav ul li{
-    display: inline-block;
-    padding:10px;
-    margin:4px 20px;
-    font-size: 16px;
-}
-.dark-nav{
-    background-color: blue;
-}
-.menu_icon{
-    display: none;
-}
-@media (max-width:1000px){
-    .logo{
-        width:140px;
-    }
-    nav ul li{
-        margin: 10px 15px;
-    }
-}
-@media (max-width:840px){
-    nav{
-        padding:15px 0;
-
-    }
-    nav ul{
-        position:fixed;
-        top:0;
-        right:0;
-        bottom:0;
-        background:blue;
-        width:200px;
-        z-index: -1;
-        padding-top: 70px;
-        transition:0.5s;
-    }
-    nav ul li{
-        display: block;
-        margin:25px 40px;
-    }
-    .menu_icon{
-        display: block;
-        width:30px;
-        cursor: pointer;
-
-    }
-    .hide-mobile-icon{
-        right:-200px;
-    }
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: blue;
+    width: 200px;
+    z-index: -1;
+    padding-top: 70px;
+    transition: 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px 40px;
+  }
+  .menu_icon {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+  }
+  .hide-mobile-icon {
+    right: -200px;
+  }
 }
